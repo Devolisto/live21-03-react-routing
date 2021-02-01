@@ -1,6 +1,10 @@
 import { Button, ButtonsWrapper } from "./styles";
+import { useParams } from "react-router-dom";
+
+
 
 const InstructorProfile = ({ instructors, instructorSlug, goTo }) => {
+  instructorSlug = useParams().instructorSlug;
   const instructor = instructors.find(
     (instructor) => instructor.slug === instructorSlug
   );
